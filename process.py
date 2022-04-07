@@ -8,8 +8,11 @@ txt_filepath_list = glob.glob(os.path.join(__SRC_DIR, "*.txt"))
 for filepath in txt_filepath_list:
 	basename = os.path.basename(filepath)
 	with open(filepath, 'r', encoding="utf-8") as fp:
-		text = fp.read()
+		raw = fp.readlines()
 
+	print(raw)
+
+	text = "  <br>".join(raw)
 	text.replace("\n", "<br><br>\n")
 	text.replace("#", " - ")
 
