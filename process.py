@@ -10,7 +10,7 @@ for filepath in txt_filepath_list:
 	with open(filepath, 'r', encoding="utf-8") as fp:
 		text = fp.read()
 
-	text.replace("\n", "<br\\>\n")
+	text.replace("\n", "<br><br>\n")
 	text.replace("#", " - ")
 
 	with open(basename + ".md", 'w', encoding="utf-8") as fp:
