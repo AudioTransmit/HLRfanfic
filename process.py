@@ -9,7 +9,7 @@ for filepath in txt_filepath_list:
 	basename = os.path.basename(filepath)
 	with open(filepath, 'r', encoding="utf-8") as fp:
 		text = fp.read()
-	text.replace("\n", "\\\n")
+	text.replace("\n", "<br\\>\n")
 
 	with open(basename + ".md", 'w', encoding="utf-8") as fp:
 		fp.write(text)
